@@ -1,0 +1,42 @@
+Requirement :
+    
+A website where one can upload audio file 
+audio file data can be in : English, Hindi, Telugu, Tamil
+convert the audio data in Text
+Text can be in native or English script
+
+Assumptions:
+    Language of audio file -> given by uploader 
+    Fromat of audio file -> uploader
+    length of audio file can be greater then 1 mins 
+    Using cloud bucket is allowed to store audio data
+
+
+Version 1:
+
+1. Upload audio file
+2. Take meta info like (mp3, wav etc)
+3. Return the text in English script
+4. User Has to make one more request to get Text
+
+
+ELP :
+
+2. Upload the audio data to Google storage 
+    (Required for processing any recordign > 1 mins)
+
+2. Give drop down to get meta data info : To be used for creating request body
+
+2. Make call to longrunningrecognisation API
+3. API returns a "name"
+
+4. Use this name to make other api call to get
+result of processing 
+
+
+
+
+    
+
+
+

@@ -1,0 +1,142 @@
+Long running process:
+    
+
+    Attempting to transcribe local audio files that are longer than 60 seconds will result in an error. 
+    To use asynchronous speech recognition to transcribe audio longer than 60 seconds, 
+    you must have your data saved in a Google Cloud Storage bucket
+
+    Resource : https://cloud.google.com/speech-to-text/docs/async-recognize
+
+api key : AIzaSyBdRDNmZI44-snkZaRbnmUhMGPm0nVY8u0
+Test gs : gs://himanshu-audios/t.wav
+
+
+1.To Make Request to API:
+
+    curl --request POST \
+      'https://speech.googleapis.com/v1p1beta1/speech:longrunningrecognize?key=AIzaSyA0afzOhl0U3k78SQIzskM9iMg5UnVcNi4' \
+      --header 'Accept: application/json' \
+      --header 'Content-Type: application/json' \
+      --data '{"config":{"languageCode":"en-IN"},"audio":{"uri":"gs://himanshu-audios/t.wav"}}' \
+      --compressed
+
+
+        Response of API:
+        {
+            "name": "3359996188333662959"
+        }
+
+2. Request to get the Text file:
+
+    curl \               
+      'https://speech.googleapis.com/v1p1beta1/operations/3359996188333662959
+      --header 'Accept: application/json' \      
+      --compressed   
+
+    curl -H "Content-Type: application/json; charset=utf-8" \
+     "https://speech.googleapis.com/v1/operations/your-operation-name?key=AIzaSyA0afzOhl0U3k78SQIzskM9iMg5UnVcNi4"
+
+
+          Response of API:
+          {
+          "name": "3359996188333662959",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.speech.v1p1beta1.LongRunningRecognizeMetadata",
+            "progressPercent": 100,
+            "startTime": "2023-12-01T04:19:54.869305Z",
+            "lastUpdateTime": "2023-12-01T04:19:56.072618Z",
+            "uri": "gs://cloud-samples-tests/speech/brooklyn.flac"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.cloud.speech.v1p1beta1.LongRunningRecognizeResponse",
+            "results": [
+              {
+                "alternatives": [
+                  {
+                    "transcript": "how old is the Brooklyn Bridge",
+                    "confidence": 0.9828748
+                  }
+                ],
+                "resultEndTime": "1.770s",
+                "languageCode": "en-us"
+              }
+            ],
+            "totalBilledTime": "2s",
+            "requestId": "3359996188333662959"
+          }
+        }
+
+-------------------------------------------------------------------------------------------------
+
+Lets find out how to put file in google storage bucket:
+
+Curlt to upload data to cloud 
+curl -X POST --data-binary @t.wav \
+    -H "Authorization: Bearer ya29.a0AfB_byDqeTLXvT3J_JQ6ZAm4-ssRf7cldHJFVUaGxEGrrPlK00ez-vcmfN870SwbPasZsXoQ9NDWpdGcPntwMufZ_kzDCFbyn51JwUuUo8TAdH7CY3rRk7RWFw-PEUXVr2he7u8TPnIE5-Ohs3up51akACQAphQwVSmnaCgYKAaoSARISFQHGX2MiLB_RPnOa16sEXDcdSpl9Xg0171" \
+    -H "Content-Type: audio" \
+    "https://storage.googleapis.com/upload/storage/v1/b/himanshu-data/o?uploadType=media&name=large"
+
+Moving forward with One access token that i generated oAuth 
+Will find a way if It can be done without access token 
+
+----------------------------------------------------------------------------
+
+Creating header for request body:
+
+will the request config on website also
+If want to change during testing
+
+
+---------------------------------------------------------------
+
+language codes :
+ta-IN
+te-IN
+hi-IN
+en-IN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------
+
+Get access token
+OAuth playground : https://developers.google.com/oauthplayground/#step2&apisSelect=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdevstorage.full_control&auth_code=4%2F0AfJohXl-v6bJ7d93UYu4xCXp_4o1k86FyJGkUNvktOuONmQ9kEWXLk50CkjlbvsX1Lhn6g&refresh_token=1%2F%2F042VEDBmrk_qECgYIARAAGAQSNwF-L9Ir5OQkGyOIPLZb9qmLqr0-73FOjh0okA9rDEBzn2Jj_VcZDaqENP-4MoC_emoliicAWyc&access_token_field=ya29.a0AfB_byDqeTLXvT3J_JQ6ZAm4-ssRf7cldHJFVUaGxEGrrPlK00ez-vcmfN870SwbPasZsXoQ9NDWpdGcPntwMufZ_kzDCFbyn51JwUuUo8TAdH7CY3rRk7RWFw-PEUXVr2he7u8TPnIE5-Ohs3up51akACQAphQwVSmnaCgYKAaoSARISFQHGX2MiLB_RPnOa16sEXDcdSpl9Xg0171&url=https%3A%2F%2Fstorage.googleapis.com%2Fhimanshu-data&content_type=application%2Fjson&http_method=GET&useDefaultOauthCred=unchecked&oauthEndpointSelect=Google&oauthAuthEndpointValue=https%3A%2F%2Faccounts.google.com%2Fo%2Foauth2%2Fv2%2Fauth&oauthTokenEndpointValue=https%3A%2F%2Foauth2.googleapis.com%2Ftoken&expires_in=3598&access_token_issue_date=1701418155&for_access_token=ya29.a0AfB_byDqeTLXvT3J_JQ6ZAm4-ssRf7cldHJFVUaGxEGrrPlK00ez-vcmfN870SwbPasZsXoQ9NDWpdGcPntwMufZ_kzDCFbyn51JwUuUo8TAdH7CY3rRk7RWFw-PEUXVr2he7u8TPnIE5-Ohs3up51akACQAphQwVSmnaCgYKAaoSARISFQHGX2MiLB_RPnOa16sEXDcdSpl9Xg0171&includeCredentials=checked&accessTokenType=bearer&autoRefreshToken=unchecked&accessType=offline&prompt=consent&response_type=code&wrapLines=on
+
+
+current access token : ya29.a0AfB_byDqeTLXvT3J_JQ6ZAm4-ssRf7cldHJFVUaGxEGrrPlK00ez-vcmfN870SwbPasZsXoQ9NDWpdGcPntwMufZ_kzDCFbyn51JwUuUo8TAdH7CY3rRk7RWFw-PEUXVr2he7u8TPnIE5-Ohs3up51akACQAphQwVSmnaCgYKAaoSARISFQHGX2MiLB_RPnOa16sEXDcdSpl9Xg0171
