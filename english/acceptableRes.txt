@@ -1,0 +1,143 @@
+{'done': True,
+        'metadata': {'@type': 'type.googleapis.com/google.cloud.speech.v1p1beta1.LongRunningRecognizeMetadata',
+                     'lastUpdateTime': '2023-12-02T06:27:17.801574Z',
+                     'progressPercent': 100,
+                     'startTime': '2023-12-02T06:26:45.406568Z',
+                     'uri': 'gs://himanshu-data/callcenterEng.wav'},
+        'name': '4291281005382917963',
+        'response': {'@type': 'type.googleapis.com/google.cloud.speech.v1p1beta1.LongRunningRecognizeResponse',
+                     'requestId': '4291281005382917963',
+                     'results': [{'alternatives': [{'confidence': 0.90991247,
+                                                    'transcript': 'hello future we '
+                                                                  'hello hello hello '
+                                                                  'how can help you '
+                                                                  'hello I have a few '
+                                                                  'concerns regarding '
+                                                                  'my credit card and '
+                                                                  'some transactions '
+                                                                  'That seems to be '
+                                                                  'incorrect can you '
+                                                                  'assist me with '
+                                                                  'this caused by the '
+                                                                  'incorrect '
+                                                                  'transaction to '
+                                                                  'assist you better '
+                                                                  'could you please '
+                                                                  'provide me with '
+                                                                  'your credit card '
+                                                                  'numbers and some '
+                                                                  'details about the '
+                                                                  'Pacific '
+                                                                  'transaction show '
+                                                                  'my credit card '
+                                                                  'number is 4213 '
+                                                                  '32148 90009 I have '
+                                                                  'noticed two '
+                                                                  'transactions on my '
+                                                                  'statement that I '
+                                                                  'do not recognise '
+                                                                  'there seems to be '
+                                                                  'fraud'}],
+                                  'languageCode': 'en-in',
+                                  'resultEndTime': '59.970s'},
+                                 {'alternatives': [{'confidence': 0.9260353,
+                                                    'transcript': " I'd like to "
+                                                                  'dispute them and '
+                                                                  'ensure they are '
+                                                                  'removed from my '
+                                                                  'account I am sorry '
+                                                                  'to hear about the '
+                                                                  'transaction on '
+                                                                  'your track '
+                                                                  'understand your '
+                                                                  'concern and I will '
+                                                                  'do everything I '
+                                                                  'can assist you let '
+                                                                  'me go ahead and '
+                                                                  'give you the '
+                                                                  'transaction for '
+                                                                  'you please bear '
+                                                                  'with me while I '
+                                                                  'check the details '
+                                                                  'for you ok please '
+                                                                  'take your time I '
+                                                                  'will be waiting '
+                                                                  'for your patience '
+                                                                  'I have delete all '
+                                                                  'the transactions '
+                                                                  'on your account '
+                                                                  'and I can confirm '
+                                                                  'that they do not '
+                                                                  'there to appear to '
+                                                                  'be fraud I will '
+                                                                  'immediately insert '
+                                                                  'a dispute '
+                                                                  'resolution process '
+                                                                  'purchase '
+                                                                  'transaction as '
+                                                                  'part of this '
+                                                                  'process we will '
+                                                                  'investigate the '
+                                                                  'transaction and '
+                                                                  'inform to be fraud '
+                                                                  'they will be '
+                                                                  'removed from '
+                                                                  'your'}],
+                                  'languageCode': 'en-in',
+                                  'resultEndTime': '119.940s'},
+                                 {'alternatives': [{'confidence': 0.9141644,
+                                                    'transcript': ' you will not be '
+                                                                  'held liable for '
+                                                                  'them additional Li '
+                                                                  'I will be blocking '
+                                                                  'your cuts for '
+                                                                  'security purpose '
+                                                                  'and issued a new '
+                                                                  'one with the '
+                                                                  'different ka yeah '
+                                                                  'thank you for your '
+                                                                  'action I '
+                                                                  'appreciate your '
+                                                                  'help in resolving '
+                                                                  'this issue what '
+                                                                  'should I do next '
+                                                                  'do I need to '
+                                                                  'provide any '
+                                                                  'additional '
+                                                                  'information or any '
+                                                                  'documents for the '
+                                                                  'dispute will be '
+                                                                  'sending you a '
+                                                                  'Dispute Form via '
+                                                                  'mail depending on '
+                                                                  'your preference '
+                                                                  'this form will '
+                                                                  'outline the '
+                                                                  'necessary steps '
+                                                                  'and additional '
+                                                                  'information or '
+                                                                  'documentation '
+                                                                  'required to '
+                                                                  'complete the '
+                                                                  'dispute once you '
+                                                                  'receive the form '
+                                                                  'please fill out '
+                                                                  'accurately provide '
+                                                                  'any supporting '
+                                                                  'documents '
+                                                                  'requested and '
+                                                                  'return it was'}],
+                                  'languageCode': 'en-in',
+                                  'resultEndTime': '179.910s'},
+                                 {'alternatives': [{'confidence': 0.88620317,
+                                                    'transcript': ' in the Pacific '
+                                                                  'time from our team '
+                                                                  'will thoroughly '
+                                                                  'investigate the '
+                                                                  'matter and keep '
+                                                                  'you updated on the '
+                                                                  'process'}],
+                                  'languageCode': 'en-in',
+                                  'resultEndTime': '186.990s'}],
+                     'totalBilledTime': '187s'}}
+
